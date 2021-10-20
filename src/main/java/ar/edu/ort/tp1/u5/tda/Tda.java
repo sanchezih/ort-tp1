@@ -12,7 +12,7 @@ public interface Tda {
 	boolean isEmpty();
 
 	boolean isFull();
-	
+
 	void checkEmptiness() throws RuntimeException;
 
 	void checkFullness() throws RuntimeException;

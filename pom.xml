@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ar.edu.ort</groupId>
 	<artifactId>ort-tp1</artifactId>
-	<version>1.0.0</version>
+	<version>3</version>
 	<name>tda</name>
 	<description>tdas</description>
 	<packaging>jar</packaging>

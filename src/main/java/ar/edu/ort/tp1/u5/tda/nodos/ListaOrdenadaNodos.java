@@ -4,7 +4,8 @@ import java.util.Iterator;
 
 import ar.edu.ort.tp1.u5.tda.ListaOrdenada;
 
-public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements ListaOrdenada<K, T> {
+public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T>
+		implements ListaOrdenada<K, T> {
 
 	private NodoLista<T> last;
 
@@ -25,7 +26,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 			// es el primer nodo (lista vacia)
 			first = node;
 			last = node;
-		} else if (compare(newElement, first.getElement()) <= 0) {
+		} else if (compare(newElement, first.getElement()) < 0) {
 			// tiene que quedar antes que el first
 			node.next(first);
 			((NodoLista<T>) first).previous(node);
@@ -49,7 +50,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 				((NodoLista<T>) node.next()).previous(node);
 			}
 		}
-		incrementSize();
+		incrementCount();
 	}
 
 	@Override
@@ -68,7 +69,11 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 	@Override
 	public T get(int pos) {
 		NodoLista<T> aux = getNodeAt(pos);
-		return aux.getElement();
+		T dato = null;
+		if (aux != null) {
+			dato = aux.getElement();
+		}
+		return dato;
 	}
 
 	protected NodoLista<T> getFirst() {
@@ -81,8 +86,8 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 	 */
 	private NodoLista<T> getNodeAt(int pos) {
 		checkEmptiness();
-		if (pos < 0 || pos >= size()) {
-			throw new IndexOutOfBoundsException(String.format(MSG_INDEX_OUT_OF_RANGE, size()));
+		if (pos < 0 || pos >= getCount()) {
+			throw new IndexOutOfBoundsException(String.format(MSG_INDEX_OUT_OF_RANGE, getCount()));
 		}
 		NodoLista<T> aux = (NodoLista<T>) first;
 		for (int i = 0; i < pos; i++) {
@@ -92,11 +97,11 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 	}
 
 	/**
-	 * Remueve el el nodo del elemento recibido.
+	 * Remueve el primer elemento cuya clave coincide con la clave recibida.
 	 * 
 	 * @param elem
-	 *            El nodo a remover.
-	 * @return True cuando la operacion fue exitosa.
+	 *            La clave del elemento a buscar.
+	 * @return El elemento removido o null.
 	 */
 	@Override
 	public boolean remove(T elem) {
@@ -155,7 +160,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 		if (node.hasNext()) {
 			((NodoLista<T>) node.next()).previous(node.previous());
 		}
-		decrementSize();
+		decrementCount();
 		return element;
 	}
 
@@ -178,11 +183,6 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 			aux = (NodoLista<T>) aux.next();
 		}
 		return aux;
-	}
-	
-	@Override
-	public int size() {
-		return getCurrentSize();
 	}
 
 	@Override

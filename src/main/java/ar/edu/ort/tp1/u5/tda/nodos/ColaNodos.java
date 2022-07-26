@@ -25,7 +25,7 @@ public class ColaNodos<T> extends TdaNodos<T> implements Cola<T> {
 			last.next(nuevoNodo);
 		}
 		last = nuevoNodo;
-		incrementSize();
+		incrementCount();
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class ColaNodos<T> extends TdaNodos<T> implements Cola<T> {
 		checkEmptiness();
 		Nodo<T> aux = first;
 		first = first.next();
-		decrementSize();
+		decrementCount();
 		return aux.getElement();
 	}
 

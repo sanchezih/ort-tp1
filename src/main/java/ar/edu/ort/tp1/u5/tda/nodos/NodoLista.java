@@ -1,5 +1,6 @@
 package ar.edu.ort.tp1.u5.tda.nodos;
 
+
 public class NodoLista<T> extends Nodo<T> {
 
 	private NodoLista<T> previous;

@@ -23,7 +23,7 @@ public class PilaNodos<T> extends TdaNodos<T> implements Pila<T> {
 		checkEmptiness();
 		Nodo<T> aux = first;
 		first = first.next();
-		decrementSize();
+		decrementCount();
 		return aux.getElement();
 	}
 
@@ -33,7 +33,6 @@ public class PilaNodos<T> extends TdaNodos<T> implements Pila<T> {
 		Nodo<T> nuevoNodo = new Nodo<>(elemento);
 		nuevoNodo.next(first);
 		first = nuevoNodo;
-		incrementSize();
+		incrementCount();
 	}
-
 }

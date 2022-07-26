@@ -23,5 +23,4 @@ public interface ListaOrdenada<K, T> extends Tda, Iterable<T> {
 	T removeByKey(K key);
 
 	T search(K key);
-
 }

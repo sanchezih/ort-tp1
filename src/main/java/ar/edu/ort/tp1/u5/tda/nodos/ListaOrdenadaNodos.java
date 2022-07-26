@@ -1,12 +1,9 @@
 package ar.edu.ort.tp1.u5.tda.nodos;
 
 import java.util.Iterator;
-
 import ar.edu.ort.tp1.u5.tda.ListaOrdenada;
 
-public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T>
-		implements ListaOrdenada<K, T> {
-
+public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements ListaOrdenada<K, T> {
 	private NodoLista<T> last;
 
 	public ListaOrdenadaNodos() {
@@ -62,8 +59,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T>
 	/**
 	 * Devuelve el elemento en la posicion numero pos de la lista.
 	 * 
-	 * @param pos
-	 *            la posicion buscada (base 0)
+	 * @param pos la posicion buscada (base 0)
 	 * @return el elemento de esa posicion
 	 */
 	@Override
@@ -99,8 +95,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T>
 	/**
 	 * Remueve el primer elemento cuya clave coincide con la clave recibida.
 	 * 
-	 * @param elem
-	 *            La clave del elemento a buscar.
+	 * @param elem La clave del elemento a buscar.
 	 * @return El elemento removido o null.
 	 */
 	@Override
@@ -124,8 +119,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T>
 	/**
 	 * Remueve el elemento en la posicion pos de la lista.
 	 * 
-	 * @param pos
-	 *            La posicion (base 0).
+	 * @param pos La posicion (base 0).
 	 * @return El elemento removido o null.
 	 */
 	@Override
@@ -136,8 +130,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T>
 	/**
 	 * Remueve el elemento con la clave informada.
 	 * 
-	 * @param key
-	 *            La clave del elemento a eliminar.
+	 * @param key La clave del elemento a eliminar.
 	 * @return El elemento removido o null.
 	 */
 	@Override

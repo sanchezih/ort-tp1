@@ -3,13 +3,12 @@ package ar.edu.ort.tp1.u5.tda.nodos;
 import ar.edu.ort.tp1.u5.tda.Cola;
 
 public class ColaNodos<T> extends TdaNodos<T> implements Cola<T> {
-
 	private Nodo<T> last;
 
 	public ColaNodos() {
 		super();
 	}
-	
+
 	public ColaNodos(int limite) {
 		super(limite);
 		this.last = null;

@@ -3,7 +3,6 @@ package ar.edu.ort.tp1.u5.tda.nodos;
 import ar.edu.ort.tp1.u5.tda.Tda;
 
 public class TdaNodos<T> implements Tda {
-
 	protected Nodo<T> first;
 	private int limite;
 	private int count;
@@ -63,5 +62,4 @@ public class TdaNodos<T> implements Tda {
 	public int count() {
 		return count;
 	}
-
 }

@@ -6,7 +6,7 @@
 	<groupId>ar.edu.ort</groupId>
 	<artifactId>ort-tp1</artifactId>
 	<version>1.2</version>
-	<name>tda</name>
+	<name>tdas</name>
 	<description>tdas</description>
 	<packaging>jar</packaging>
 	<properties>

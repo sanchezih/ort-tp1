@@ -3,7 +3,6 @@ package ar.edu.ort.tp1.u5.tda.impl;
 import java.util.Iterator;
 
 class ListaOrdenadaIterator<T> implements Iterator<T> {
-
 	private Nodo<T> current;
 
 	public ListaOrdenadaIterator(Nodo<T> first) {
@@ -24,5 +23,4 @@ class ListaOrdenadaIterator<T> implements Iterator<T> {
 		}
 		return e;
 	}
-
 }

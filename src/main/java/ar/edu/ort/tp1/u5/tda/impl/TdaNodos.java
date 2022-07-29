@@ -3,7 +3,6 @@ package ar.edu.ort.tp1.u5.tda.impl;
 import ar.edu.ort.tp1.u5.tda.interfaces.Tda;
 
 public class TdaNodos<T> implements Tda {
-
 	protected Nodo<T> first;
 	private int limite;
 	private int currentSize;
@@ -28,7 +27,7 @@ public class TdaNodos<T> implements Tda {
 	protected void decrementSize() {
 		currentSize--;
 	}
-	
+
 	protected int getCurrentSize() {
 		return currentSize;
 	}

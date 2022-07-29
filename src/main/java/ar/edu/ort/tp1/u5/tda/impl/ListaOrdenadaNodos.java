@@ -5,7 +5,6 @@ import java.util.Iterator;
 import ar.edu.ort.tp1.u5.tda.interfaces.ListaOrdenada;
 
 public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements ListaOrdenada<K, T> {
-
 	private NodoLista<T> last;
 
 	public ListaOrdenadaNodos() {
@@ -61,8 +60,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 	/**
 	 * Devuelve el elemento en la posicion numero pos de la lista.
 	 * 
-	 * @param pos
-	 *            la posicion buscada (base 0)
+	 * @param pos la posicion buscada (base 0)
 	 * @return el elemento de esa posicion
 	 */
 	@Override
@@ -94,8 +92,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 	/**
 	 * Remueve el el nodo del elemento recibido.
 	 * 
-	 * @param elem
-	 *            El nodo a remover.
+	 * @param elem El nodo a remover.
 	 * @return True cuando la operacion fue exitosa.
 	 */
 	@Override
@@ -119,8 +116,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 	/**
 	 * Remueve el elemento en la posicion pos de la lista.
 	 * 
-	 * @param pos
-	 *            La posicion (base 0).
+	 * @param pos La posicion (base 0).
 	 * @return El elemento removido o null.
 	 */
 	@Override
@@ -131,8 +127,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 	/**
 	 * Remueve el elemento con la clave informada.
 	 * 
-	 * @param key
-	 *            La clave del elemento a eliminar.
+	 * @param key La clave del elemento a eliminar.
 	 * @return El elemento removido o null.
 	 */
 	@Override
@@ -184,7 +179,7 @@ public abstract class ListaOrdenadaNodos<K, T> extends TdaNodos<T> implements Li
 		}
 		return aux;
 	}
-	
+
 	@Override
 	public int size() {
 		return getCurrentSize();

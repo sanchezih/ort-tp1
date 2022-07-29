@@ -1,6 +1,6 @@
-package ar.edu.ort.tp1.u5.tda.nodos;
+package ar.edu.ort.tp1.u5.tda.impl;
 
-import ar.edu.ort.tp1.u5.tda.Cola;
+import ar.edu.ort.tp1.u5.tda.interfaces.Cola;
 
 public class ColaNodos<T> extends TdaNodos<T> implements Cola<T> {
 

@@ -1,6 +1,6 @@
-package ar.edu.ort.tp1.u5.tda.nodos;
+package ar.edu.ort.tp1.u5.tda.impl;
 
-import ar.edu.ort.tp1.u5.tda.Tda;
+import ar.edu.ort.tp1.u5.tda.interfaces.Tda;
 
 public class TdaNodos<T> implements Tda {
 

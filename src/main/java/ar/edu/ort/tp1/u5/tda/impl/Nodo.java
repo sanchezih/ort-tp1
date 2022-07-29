@@ -1,5 +1,4 @@
 package ar.edu.ort.tp1.u5.tda.impl;
-
 public class Nodo<T> {
 	private T dato;
 	private Nodo<T> next;

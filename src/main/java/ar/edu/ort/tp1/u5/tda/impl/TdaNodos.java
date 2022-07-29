@@ -6,7 +6,7 @@ public class TdaNodos<T> implements Tda {
 
 	protected Nodo<T> first;
 	private int limite;
-	private int count;
+	private int currentSize;
 
 	protected TdaNodos() {
 		this(SIN_LIMITE);
@@ -17,20 +17,20 @@ public class TdaNodos<T> implements Tda {
 			throw new IllegalArgumentException(ERR_TAM_ILEGAL);
 		}
 		this.limite = limite;
-		this.first = null;
-		this.count = 0;
+		first = null;
+		currentSize = 0;
 	}
 
-	protected void incrementCount() {
-		count++;
+	protected void incrementSize() {
+		currentSize++;
 	}
 
-	protected void decrementCount() {
-		count--;
+	protected void decrementSize() {
+		currentSize--;
 	}
-
-	protected int getCount() {
-		return count;
+	
+	protected int getCurrentSize() {
+		return currentSize;
 	}
 
 	@Override
@@ -51,17 +51,12 @@ public class TdaNodos<T> implements Tda {
 
 	@Override
 	public boolean isEmpty() {
-		return count == 0;
+		return currentSize == 0;
 	}
 
 	@Override
 	public boolean isFull() {
-		return count == limite;
-	}
-
-	@Override
-	public int count() {
-		return count;
+		return currentSize == limite;
 	}
 
 }

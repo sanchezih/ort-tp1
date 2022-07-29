@@ -1,6 +1,6 @@
 package ar.edu.ort.tp1.u5.tda.interfaces;
 
-public interface ListaOrdenada<K, T> extends Tda, Iterable<T> {
+public interface ListaOrdenada<K, T> extends Tda, Sizeable, Iterable<T> {
 	static final String MSG_INVALID_KEY = "Clave invalida";
 	static final String MSG_INDEX_OUT_OF_RANGE = "Indice fuera de rango: El maximo es %d";
 	static final String MSG_NULL_NODE = "El nodo es null";
@@ -23,5 +23,4 @@ public interface ListaOrdenada<K, T> extends Tda, Iterable<T> {
 	T removeByKey(K key);
 
 	T search(K key);
-
 }
